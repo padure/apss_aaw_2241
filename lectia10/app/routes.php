@@ -1,7 +1,8 @@
 <?php
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use App\Models\Book;
+
+use App\Controllers\BookController;
 
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write("Hello world!");
@@ -13,8 +14,4 @@ $app->get('/test', function(Request $request, Response $response, $args){
     return $response;
 });
 
-$app->get("/books", function(Request $request, Response $response, $args){
-    $books = Book::all();
-    $response->getBody()->write($books->toJson());
-    return $response->withHeader("Content-Type", 'application/json');
-});
+$app->get("/books", [BookController::class, 'index']);
