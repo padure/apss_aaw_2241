@@ -1,0 +1,20 @@
+{
+    "name": "php/lectia8",
+    "authors": [
+        {
+            "name": "padure",
+            "email": "paduregheorghe7@gmail.com"
+        }
+    ],
+    "scripts": {
+        "dev": "php -S localhost:8484 public/index.php"
+    },
+    "require": {
+        "monolog/monolog": "^3.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

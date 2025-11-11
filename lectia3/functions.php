@@ -40,4 +40,16 @@
         }
         return ucfirst($nume) ." ". ucfirst($prenume);
     }
+
+    function calculateStats(array $numbers): array {
+        $min = empty($numbers) ?  null :min($numbers);
+        $max = empty($numbers) ?  null :max($numbers);
+        $avg = array_sum($numbers) / count($numbers);
+        
+        return [
+            'min' => $min,
+            'max' => $max,
+            'avg' => $avg
+        ];
+    }
     
