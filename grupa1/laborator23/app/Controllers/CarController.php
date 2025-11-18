@@ -14,6 +14,10 @@ class CarController extends Controller{
         ]));
         return $response;
     }
+    public function create(Request $request, Response $response, $args){
+        $response->getBody()->write($this->view('cars/create.view.php'));
+        return $response;
+    }
 
     public function show(Request $request, Response $response, $args){
         $car = Car::find($args['car']);
@@ -29,5 +33,15 @@ class CarController extends Controller{
             'car' => $car
         ]));
         return $response;
+    }
+    
+    public function update(Request $request, Response $response, $args){
+        $car = Car::find($args['car']);
+        $data = $request->getParsedBody();
+        $car->fill($data);
+        $car->save();
+        return $response
+            ->withStatus(302)
+            ->withHeader('Location', '/cars');
     }
 }

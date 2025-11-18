@@ -13,7 +13,9 @@
     
     <!-- Main Content -->
     <div class="container-lg py-5">
-
+        <div class="row justify-content-center">
+            <a href="/cars/create" class="btn btn-dark btn-sm mb-3 col-1">Adauga</a>
+        </div>
         <!-- Cars List -->
         <?php if (empty($cars)): ?>
             <div class="alert alert-info text-center py-5" role="alert">

@@ -33,7 +33,7 @@
                         </div>
 
                         <form action="/cars/<?= htmlspecialchars($car->id); ?>" method="POST" class="card-body">
-                            <input type="hidden" name="_method" value="PUT">
+                            <input type="hidden" name="_METHOD" value="PUT">
 
                             <div class="mb-3">
                                 <label for="make" class="form-label">Make</label>
