@@ -18,6 +18,14 @@ class CarController extends Controller{
         $response->getBody()->write($this->view('cars/create.view.php'));
         return $response;
     }
+    
+    public function store(Request $request, Response $response, $args){
+        $data = $request->getParsedBody();
+        Car::create($data);
+        return $response
+            ->withStatus(302)
+            ->withHeader('Location', '/cars');
+    }
 
     public function show(Request $request, Response $response, $args){
         $car = Car::find($args['car']);
