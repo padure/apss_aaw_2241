@@ -22,4 +22,12 @@ class CarController extends Controller{
         ]));
         return $response;
     }
+    
+    public function edit(Request $request, Response $response, $args){
+        $car = Car::find($args['car']);
+        $response->getBody()->write($this->view('cars/edit.view.php', [
+            'car' => $car
+        ]));
+        return $response;
+    }
 }
