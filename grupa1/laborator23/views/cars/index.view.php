@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fleet Management - Cars</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body class="bg-light">
@@ -72,11 +74,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white-50 py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">© 2025 Fleet Management System. All rights reserved.</p>
-        </div>
-    </footer>
+    <?php include __DIR__ . "/../components/footer.view.php"; ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>

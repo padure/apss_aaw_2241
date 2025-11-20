@@ -52,4 +52,12 @@ class CarController extends Controller{
             ->withStatus(302)
             ->withHeader('Location', '/cars');
     }
+
+    public function delete(Request $request, Response $response, $args){
+        $car = Car::find($args['car']);
+        $car->delete();
+        return $response
+            ->withStatus(302)
+            ->withHeader('Location', '/cars');
+    }
 }

@@ -73,11 +73,8 @@
         </div>
     </div>
 
-    <footer class="bg-dark text-white-50 py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">© 2025 Fleet Management System. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Footer -->
+    <?php include __DIR__ . "/../components/footer.view.php"; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
