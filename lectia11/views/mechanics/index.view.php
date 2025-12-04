@@ -15,27 +15,31 @@
     <!-- Features Section -->
     <section class="py-5">
         <div class="container-lg">
-            <h2>Lista masinilor din sistem</h2>
+            <h2>Lista mecanicilor din sistem</h2>
             <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Mechanic</th>
-                        <th>Proprietar</th>
+                        <th>Nume</th>
+                        <th>Masini</th>
                         <th>Actiuni</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php $nr = 1;?>
-                    <?php foreach( $cars as $car ): ?>
+                    <?php foreach( $mechanics as $mechanic ): ?>
                         <tr>
                             <td><?= $nr++; ?></td>
-                            <td><?= $car->name; ?></td>
-                            <td><?= $car->mechanic->name; ?></td>
-                            <td><?= $car->owner->name; ?></td>
+                            <td><?= $mechanic->name; ?></td>
                             <td>
-                                <a  href="/cars/<?=$car->id;?>/edit" 
+                                <?php foreach( $mechanic->cars()->get() as $car ): ?>
+                                    <div>
+                                        <div><?= $car->name; ?></div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </td>
+                            <td>
+                                <a  href="/mechanic/<?=$mechanic->id;?>/edit" 
                                     class="btn btn-warning btn-sm">
                                     Edit
                                 </a>
