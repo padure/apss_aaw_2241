@@ -9,7 +9,7 @@ use App\Models\Car;
 class Mechanic extends Model{
     protected $table = "mechanics";
     protected $fillable = ["id", "name"];
-    public function cars():HasMany
+    public function cars(): HasMany
     {
         return $this->hasMany(Car::class);
     }

@@ -10,6 +10,7 @@ use App\Models\Owner;
 
 class Car extends Model{
     protected $table = "cars";
+    protected $hidden = ['mechanic_id'];
     protected $fillable = ["id", "name", "mechanic_id"];
 
     public function mechanic ():BelongsTo {
