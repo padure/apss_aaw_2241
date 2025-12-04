@@ -1,25 +1,37 @@
-<footer class="bg-dark text-white-50 py-5 mt-5 border-top border-danger">
-    <div class="container-lg">
-        <div class="row g-4 mb-4">
-            <div class="col-md-6">
-                <h6 class="text-white fw-bold mb-3">
+<footer role="contentinfo" class="bg-slate-900 text-slate-300 mt-8">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <h6 class="text-white text-lg font-semibold mb-2">
                     Sistem intern de rapoarte tehnice
                 </h6>
-                <p class="small">Soluția completă pentru gestionarea rapoartelor tehnice.</p>
+                <p class="text-sm text-slate-300/90">
+                    Soluția completă pentru gestionarea rapoartelor tehnice — ușor de folosit și securizată.
+                </p>
             </div>
-            <div class="col-md-6">
-                <h6 class="text-white fw-bold mb-3">Linkuri Rapide</h6>
-                <ul class="list-unstyled small">
-                    <li><a href="/reports" class="text-white-50 text-decoration-none">Vizualizați</a></li>
-                    <li><a href="/reports/create" class="text-white-50 text-decoration-none">Adăugați</a></li>
-                    <li><a href="/" class="text-white-50 text-decoration-none">Acasă</a></li>
+
+            <div>
+                <h6 class="text-white text-lg font-semibold mb-2">Linkuri rapide</h6>
+                <ul class="text-sm space-y-2">
+                    <li>
+                        <a href="/reports"
+                            class="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded">Vizualizați</a>
+                    </li>
+                    <li>
+                        <a href="/reports/create"
+                            class="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded">Adăugați</a>
+                    </li>
+                    <li>
+                        <a href="/"
+                            class="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded">Acasă</a>
+                    </li>
                 </ul>
             </div>
         </div>
-        <hr class="border-secondary">
-        <div class="text-center">
-            <p class="mb-0 small">
-                <i class="bi bi-c-circle me-2"></i><?= date("Y"); ?> Sistem Intern de Rapoarte Tehnice. Toate drepturile rezervate.
+
+        <div class="mt-6 border-t border-slate-700 pt-4 text-center">
+            <p class="text-xs text-slate-400 mb-0">
+                &copy; <?= date("Y"); ?> Sistem Intern de Rapoarte Tehnice. Toate drepturile rezervate.
             </p>
         </div>
     </div>

@@ -4,9 +4,14 @@ namespace App\Controllers;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use App\Controllers\Controller;
+use App\Models\Car;
 
-class HomeController extends Controller{
+class CarController extends Controller{
     public function index(Request $request, Response $response){
-        return $this->render($response, 'home');
+        $cars = Car::all();
+        $response->getBody()->write($this->view('cars/index.view.php', [
+            'cars' => $cars
+        ]));
+        return $response;
     }
 }

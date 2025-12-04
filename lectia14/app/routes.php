@@ -5,3 +5,4 @@ use App\Controllers\ReportController;
 
 $app->get("/", [HomeController::class, 'index']);
 $app->get("/reports", [ReportController::class, 'index']);
+$app->get("/reports/create", [ReportController::class, 'create']);

@@ -9,8 +9,8 @@ use App\Models\Mechanic;
 use App\Models\Owner;
 
 class Car extends Model{
-     protected $table = "cars";
-     protected $fillable = ["id", "name", "mechanic_id"];
+    protected $table = "cars";
+    protected $fillable = ["id", "name", "mechanic_id"];
 
     public function mechanic ():BelongsTo {
         return $this->belongsTo(Mechanic::class);
